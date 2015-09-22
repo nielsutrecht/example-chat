@@ -1,0 +1,12 @@
+[
+  {
+    "name":"General",
+    "persistent": true,
+    "users": 10
+  },
+  {
+    "name":"Java",
+    "persistent": false,
+    "users": 5
+  }
+]

@@ -1,0 +1,6 @@
+<div clas="row" ng-repeat="line in chat">
+    <div class="col-md-2">{{line.user}}</div>
+    <div class="col-md-1">{{line.time | date : 'HH:mm'}}</div>
+    <div class="col-md-9">{{line.message}}</div>
+
+</div>

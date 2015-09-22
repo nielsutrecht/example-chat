@@ -6,7 +6,7 @@ appModule.config(['$routeProvider',
             when('/home', {
                 templateUrl: 'partials/home.html'
             }).
-            when('/chat/:name/:room', {
+            when('/chat/:room', {
                 templateUrl: 'partials/chat.html'
             }).
             otherwise({

@@ -5,8 +5,9 @@ angular.module('chatApp').directive('chat', ['$routeParams', 'chatService', func
 
         scope: {},
         controller: function ($scope) {
-            $sc
-            chatService.
+            chatService.getChat($routeParams.room).then(function(chat) {
+                $scope.chat = chat;
+            });
         }
     };
 }]);

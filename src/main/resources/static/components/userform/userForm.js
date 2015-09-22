@@ -1,4 +1,4 @@
-angular.module('chatApp').directive('userForm', ['$routeParams', 'chatService', function ($routeParams, chatService) {
+angular.module('chatApp').directive('userForm', ['$route', '$routeParams', 'chatService', function ($route, $routeParams, chatService) {
     return {
         restrict: 'E',
         templateUrl: 'components/userform/userForm.html',

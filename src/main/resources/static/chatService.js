@@ -9,7 +9,7 @@ angular.module('chatApp').service('chatService', ['$http', '$q', function($http,
     }
 
     function connect() {
-        var socket = new SockJS('/hello');
+        var socket = new SockJS('http://localhost:8080/hello');
         stompClient = Stomp.over(socket);
         stompClient.connect({}, function(frame) {
             stompClient.subscribe('/topic/greetings', function(greeting){
@@ -32,14 +32,6 @@ angular.module('chatApp').service('chatService', ['$http', '$q', function($http,
     function login(name, password) {
         console.log('chatService:login');
         stompClient.send("/app/hello", {}, JSON.stringify({ 'user': name, 'message': 'Hello world!' }));
-    }
-
-    function addChatListener(callback) {
-        chatListeners.push(callback);
-    }
-
-    function addChatListener(callback) {
-        roomListeners.push(callback);
     }
 
     return {

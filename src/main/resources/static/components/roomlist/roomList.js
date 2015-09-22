@@ -5,8 +5,6 @@ angular.module('chatApp').directive('roomList', ['$routeParams', 'chatService', 
 
         scope: {},
         controller: function ($scope) {
-            $scope.userName = $routeParams.name;
-
             if(!chatService.isConnected()) {
                 chatService.connect();
             }
